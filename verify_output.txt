@@ -1,0 +1,38 @@
+[users] PASS: id
+[users] PASS: email
+[users] PASS: role
+[users] PASS: full_name
+[users] PASS: auth_user_id
+[recipes] PASS: id
+[recipes] PASS: recipe_code
+[recipes] Error on garment_name: 42703 - column recipes.garment_name does not exist
+[recipes] PASS: name
+[recipes] PASS: std_fabric_yards
+[recipes] Error on wastage_cap_pct: 42703 - column recipes.wastage_cap_pct does not exist
+[recipes] PASS: wastage_cap
+[recipe_components] PASS: id
+[recipe_components] PASS: recipe_id
+[recipe_components] PASS: component_name
+[recipe_components] PASS: pieces_per_garment
+[cutting_orders] PASS: id
+[cutting_orders] PASS: recipe_id
+[cutting_orders] PASS: target_qty
+[cutting_orders] PASS: fabric_roll_id
+[cutting_orders] PASS: actual_fabric_yds
+[cutting_orders] PASS: status
+[cutting_orders] PASS: created_by
+[cutting_orders] PASS: created_at
+[cutting_orders] PASS: order_no
+[verification_items] PASS: id
+[verification_items] PASS: order_id
+[verification_items] PASS: component_id
+[verification_items] PASS: expected_qty
+[verification_items] PASS: actual_qty
+[verification_items] PASS: status
+[verification_logs] PASS: id
+[verification_logs] PASS: order_id
+[verification_logs] PASS: verifier_id
+[verification_logs] Error on verified_at: 42703 - column verification_logs.verified_at does not exist
+[verification_logs] PASS: decision
+[verification_logs] Error on rejection_reason: 42703 - column verification_logs.rejection_reason does not exist
+[verification_logs] PASS: wastage_pct

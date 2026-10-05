@@ -1,0 +1,18 @@
+[users]
+Columns: id, email, password_hash, role, full_name, created_at, auth_user_id
+
+[recipes]
+Columns: id, recipe_code, name, category, std_fabric_yards, wastage_cap, created_at
+
+[recipe_components]
+Columns: id, recipe_id, component_name, pieces_per_garment, image_url, created_at
+
+[cutting_orders]
+Insert Error: {"code":"23502","details":"Failing row contains (b7e47b58-17e3-43bc-a284-de53539c27d3, null, null, null, null, null, PENDING_VERIFICATION, null, 2026-10-05 05:15:24.274335+00, 2026-10-05 05:15:24.274335+00).","hint":null,"message":"null value in column \"order_no\" of relation \"cutting_orders\" violates not-null constraint"}
+
+[verification_items]
+Insert Error: {"code":"23502","details":"Failing row contains (81a1b86a-e18e-44de-ac18-6cd6b549edce, null, null, null, null, null, 2026-10-05 05:15:24.468525+00).","hint":null,"message":"null value in column \"order_id\" of relation \"verification_items\" violates not-null constraint"}
+
+[verification_logs]
+Insert Error: {"code":"23502","details":"Failing row contains (52162d50-3745-450f-a770-5c5bc116280e, null, null, null, null, null, 2026-10-05 05:15:24.696316+00).","hint":null,"message":"null value in column \"order_id\" of relation \"verification_logs\" violates not-null constraint"}
+
