@@ -39,24 +39,36 @@ export default async function SewingDashboard() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 text-gray-900">
-            <header className="bg-white shadow mb-8">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-                    <div>
-                        <h1 className="text-xl font-bold text-gray-900">ApparelFlow ERP</h1>
-                        <p className="text-sm text-gray-500">
-                            Sewing Supervisor Dashboard &mdash; {session.appUser.email}
-                        </p>
+        <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-purple-100 animate-fade-in">
+            {/* Premium Nav Header */}
+            <header className="glassmorphism sticky top-0 z-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center relative">
+                    <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <span className="text-white font-extrabold text-lg">S</span>
+                        </div>
+                        <div>
+                            <h1 className="text-xl font-extrabold tracking-tight text-slate-800">ApparelFlow <span className="text-purple-600">ERP</span></h1>
+                            <div className="flex items-center gap-2 mt-0.5">
+                                <span className="flex h-2 w-2 relative">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                                </span>
+                                <p className="text-[11px] uppercase tracking-wider font-bold text-slate-500">
+                                    Sewing Supervisor &bull; <span className="normal-case tracking-normal font-medium">{session.appUser.email}</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <form action={logout}>
-                        <button type="submit" className="text-sm bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md font-medium">
+                        <button type="submit" className="text-sm bg-white hover:bg-slate-50 border border-slate-200 px-5 py-2.5 rounded-lg font-semibold text-slate-600 shadow-sm transition-all hover:shadow hover:text-slate-900 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
                             Sign Out
                         </button>
                     </form>
                 </div>
             </header>
 
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 {ordersError ? (
                     <div className="text-red-500">Failed to load sewing queue.</div>
                 ) : (
