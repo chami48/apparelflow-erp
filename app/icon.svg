@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="256" height="256" rx="64" fill="url(#bg-grad)" />
+  
+  <!-- "A" Monogram / Apparel Fold Icon -->
+  <path d="M128 40 L50 190 L95 190 L128 120 L161 190 L206 190 Z" fill="url(#fg-grad)" />
+  
+  <!-- Overlapping accent (Fold effect) -->
+  <path d="M128 120 L161 190 L128 190 Z" fill="#2563EB" opacity="0.9" />
+
+  <defs>
+    <!-- Premium background gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+
+    <!-- Foreground letter gradient -->
+    <linearGradient id="fg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+  </defs>
+</svg>
