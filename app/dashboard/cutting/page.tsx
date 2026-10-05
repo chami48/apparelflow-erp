@@ -1,11 +1,11 @@
-import { requireRole } from '@/lib/auth/server'
+import { verifyRoleOrRedirect } from '@/lib/auth/server'
 import { createClient } from '@/lib/supabase/server'
 import { CuttingForm, RecipeWithComponents } from './CuttingForm'
 import { logout } from '@/app/login/actions'
 
 export default async function CuttingDashboard() {
     // 1. Authorize - Strict Server-side RBAC
-    const session = await requireRole(['cutting_supervisor'])
+    const session = await verifyRoleOrRedirect(['cutting_supervisor'])
     const supabase = await createClient()
 
     // 2. Fetch Recipes (with components) for the creation form

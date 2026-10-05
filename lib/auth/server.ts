@@ -47,3 +47,14 @@ export async function requireRole(allowedRoles: ApplicationRole | ApplicationRol
 
     return session
 }
+
+import { redirect } from 'next/navigation'
+
+export async function verifyRoleOrRedirect(allowedRoles: ApplicationRole | ApplicationRole[]) {
+    try {
+        const session = await requireRole(allowedRoles);
+        return session;
+    } catch {
+        redirect('/dashboard');
+    }
+}

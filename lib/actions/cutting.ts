@@ -48,7 +48,7 @@ export async function createCuttingOrder(formData: FormData) {
         const order_no = `CUT-${dateStr}-${shortMs}${randomHex}`
 
         // 4. Call RPC purely atomic
-        const { data: newOrderId, error: rpcError } = await supabase.rpc('create_cutting_order_atomic', {
+        const { error: rpcError } = await supabase.rpc('create_cutting_order_atomic', {
             p_order_no: order_no,
             p_recipe_id: data.recipe_id,
             p_target_qty: data.target_qty,
